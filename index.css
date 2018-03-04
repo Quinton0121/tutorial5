@@ -1,0 +1,72 @@
+#display{
+    z-index: -1;
+    width:100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0px;
+    
+    top: 0px;
+    background-color: #000;
+}
+
+#controls{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    height: 100px;
+    width: 100vw;
+    background-color: #ccc;
+}
+
+#stickers{
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top:0px;
+    background-color: #666;
+    overflow: auto;
+}
+
+#cursor{
+    position: fixed;
+    height:100px;
+    width: auto;
+    cursor: none;
+    
+}
+
+#inputs{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 30%;
+    height: 100%;
+    background-color: #999;
+}
+
+#bgcolor{
+    margin: 3px;
+}
+
+
+.sticker{
+    height: 90%;
+    margin: 2px;
+    top:0px;
+   
+}
+
+.stickerman{
+    height: 100px;
+    width: auto;
+    position: absolute;
+    margin: 2px;
+    
+}
+
+.onlineSticker{
+    height: 90%;
+    margin: 2px;
+    top:0px;
+}
