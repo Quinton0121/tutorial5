@@ -58,8 +58,7 @@
 }
 
 .stickerman{
-    height: 100px;
-    width: auto;
+    
     position: absolute;
     margin: 2px;
     
@@ -69,4 +68,5 @@
     height: 90%;
     margin: 2px;
     top:0px;
+    
 }

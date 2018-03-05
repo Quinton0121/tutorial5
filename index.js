@@ -6,7 +6,8 @@ var bgColor = document.getElementById("bgcolor"),
     textInput = document.getElementById("textSticker"),
     stickers = document.getElementById("stickers"),
     sheight = document.getElementById("stickerHeight"),
-    cursor = document.getElementById("cursor");
+    cursor = document.getElementById("cursor"),
+    stickermanHeight = 100;
 
 function changeCursor(sticker){
     cursor.src=sticker.src;
@@ -50,14 +51,18 @@ display.addEventListener("click",function(ev){
     display.appendChild(newSticker);
     console.log(ev.pageX,ev.pageY);
     newSticker.style.left= (ev.pageX - 50) + "px";
-    newSticker.style.top = (ev.pageY - 50) + "px";   
-    sheight.addEventListener("keyup",function(ev){
-        if(ev.keyCode==13){
-           newSticker.style.height = sheight.value+"px";
-        }
-    });
+    newSticker.style.top = (ev.pageY - 50) + "px";
+    newSticker.style.height = stickermanHeight + "px";
+    
     
 });
+
+sheight.addEventListener("keyup",function(ev){
+        if(ev.keyCode==13){
+           stickermanHeight = sheight.value;
+        }
+    });
+
 
 textInput.addEventListener("keyup",function(ev){
     console.log(ev);
@@ -69,10 +74,11 @@ textInput.addEventListener("keyup",function(ev){
         textInput.value='';
         newSticker.addEventListener("click",function(){
             imgSrc = this.src;
-            
+            cursor.src= this.src;
+            display.style.cursor = 'none';
         });
         changeSrc(newSticker);
-        changeCursor(newSticker); 
+        
 
     }
 });
